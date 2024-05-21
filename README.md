@@ -1,5 +1,9 @@
 # fastapi_example
 基于 fastapi + sqlalchemy + asyncio 实现一个AI后端服务
+功能包括:
+- fastapi + pydantic 进行服务端的body映射
+- sqlalchemy + asyncio 数据库异步服务
+- docker 部署与打包
 
 # 目录
 - main.py: 入口
@@ -33,6 +37,13 @@ curl --location 'http://127.0.0.1:8000/ml/clustering/0c46960f-f826-4cf8-b4a6-e58
 3. 接收请求
 ![response](./imgs/post-response.png)
 
-
-
-# 很多其他特性在项目里没有展示出来, 小伙伴们可以在Comments里给我留言
+# 使用docker部署
+1. clone代码
+2. build docker
+```shell
+docker build . -t app:<TAG>
+```
+3. modify docker-compose: <TAG>
+4. modify example.env
+5. copy example.env to .env
+6. docker-compose up -d app --env-file .env

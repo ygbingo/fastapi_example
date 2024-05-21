@@ -6,7 +6,7 @@ class FastApiConf(BaseSettings):
     LEVEL: str = "INFO"
     LOGGER_SHOW_LEN: int = 1000
     ROOT_PATH: str = "ai-bingo"  # 与docker-compose的挂载路径一致
-    LOG_PATH: str = "app.log"
+    LOG_PATH: str = "ai-bingo/app.log"
 
     APP_VERSION: str = "0.2.0"
 
@@ -15,7 +15,7 @@ app_conf = FastApiConf()
 
 class MLConf(BaseSettings):
     USE_NORMALIZED: int = 1
-    MODEL_PATH: str = "ai-bingo/{repo_id}/models/"
+    MODEL_PATH: str = "ai-bingo/models/"
 
     # bayesian-opt
     N_CALLS: int = 5
