@@ -1,4 +1,4 @@
-# fastapi_example
+# fastapi_ML
 基于 fastapi + sqlalchemy + asyncio 实现一个AI后端服务
 功能包括:
 - fastapi + pydantic 进行服务端的body映射
